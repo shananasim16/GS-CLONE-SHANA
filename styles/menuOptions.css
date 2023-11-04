@@ -1,0 +1,75 @@
+#menuOptionsTray {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--Secondary_clr);
+  padding: 6px;
+  /* padding-bottom: 0px; */
+  gap: var(--myGap);
+}
+
+#menuOptionsTray > div {
+  padding: 5px;
+}
+
+#menuOptionsTray > .material-icons:hover {
+  background-color: var(--OptionActive_clr);
+}
+
+#menuOptionsTray > .material-icons {
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+#fontFamilySelect {
+  min-width: 120px;
+  margin-left: 30px;
+}
+
+#fontSizeSelect {
+  min-width: 50px;
+}
+
+#menuOptionsTray > div:nth-child(1),
+#menuOptionsTray > div:nth-child(6),
+#menuOptionsTray > div:nth-child(9),
+#menuOptionsTray > div:nth-child(12),
+#menuOptionsTray > div:nth-child(14) {
+  margin-left: 30px;
+}
+
+#formulaActionTray {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--Secondary_clr);
+  padding: 6px 10px;
+  padding-top: 0px;
+
+  gap: var(--myGap);
+}
+
+#activeCellDisplay {
+  min-width: 55px;
+  text-align: center;
+  width: fit-content;
+  padding: 7px 10px;
+  font-size: 17px;
+  font-weight: 600;
+  background-color: var(--Primary_clr);
+}
+
+#formulaActionTray>div:nth-child(2){
+    height: 26px;
+}
+
+#formulaActionTray>div:nth-child(2) img{
+    height: 100%;
+}
+
+#formulaInput{
+    padding: 5px 10px;
+    flex-grow: 1;
+    border: none;
+}

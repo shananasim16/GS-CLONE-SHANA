@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favIconGoogleSheets.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/grid.css">
+    <link rel="stylesheet" href="./styles/menuOptions.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Google-Sheets Clone - Home Page</title>
+</head>
+<body>
+    <header id="header">
+        <section id="fileOpt">
+            <ul>
+                <li>
+                    <p>File</p>
+                    <div class="dropdown">
+                        <a href="#">New</a>
+                        <a href="#">Open</a>
+                        <a href="#">Save</a>
+                        <a href="#">Save As</a>
+                    </div>
+                </li>
+                <li>
+                    <p>Home</p>
+                </li>
+                <li>
+                    <p>Insert</p>
+                    <div class="dropdown">
+                        <a href="#">Insert Row</a>
+                        <a href="#">Insert Column</a>
+                        <a href="#">Insert Image</a> 
+                    </div>
+                </li>
+                <li>
+                    <p>Layout</p>
+                    <div class="dropdown">
+                        <a href="#">Format Cells</a>
+                        <a href="#">Merge Cells</a>
+                        <a href="#">Cell Borders</a>
+                    </div>
+                </li>
+                <li>
+                    <p>Help</p>
+                    <div class="dropdown">
+                        <a href="#">About</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Contact Us</a>
+                    </div>
+                </li>
+            </ul>
+        </section>  
+        <section id="menuOptionsTray">
+            <div class="material-icons" id="cutBtn" onclick="handleCut()">content_cut</div>
+            <div class="material-icons" id="copyBtn" onclick="handleCopy()">content_copy</div>
+            <div class="material-icons" id="pasteBtn" onclick="handlePaste()">content_paste</div>
+            <!-- select font family Options will be added dynamically -->
+            <div><select name="font_family_select" id="fontFamilySelect" onchange="ChangeFontFamilyOnSelect(this)"></select></div>
+            <!-- select font size Options will be added dynamically -->
+            <div><select name="font_size_select" id="fontSizeSelect" onchange="ChangeFontSizeOnSelect(this)"></select></div>
+            <div class="material-icons" id="boldBtn" onclick="handleBold()">format_bold</div>
+            <div class="material-icons" id="italicBtn" onclick="handleItalic()">format_italic</div>
+            <div class="material-icons" id="underlineBtn" onclick="handleUnderline()">format_underlined</div>
+            <div class="material-icons textAlignBtns" data-value="start" onclick="handleTextAlign(this)">format_align_left</div>
+            <div class="material-icons textAlignBtns" data-value="center" onclick="handleTextAlign(this)">format_align_center</div>
+            <div class="material-icons textAlignBtns" data-value="end" onclick="handleTextAlign(this)">format_align_right</div>
+
+            <div>
+                <label for="color-picker"><span class="material-icons">format_color_text</span></label>
+                <input type="color" id="color-picker" onchange="handleTextColor(this)" style="width: 0; height: 0;">
+            </div>
+            <div>
+                <label for="bgcolor-picker"><span class="material-icons">format_color_fill</span></label>
+                <input type="color" id="bgcolor-picker" onchange="HandleBackgroundColor(this)" style="width: 0; height: 0;">
+            </div>
+            <div class="material-icons">cloud_download</div>
+            <div class="material-icons">cloud_upload</div>
+        </section>
+        <section id="formulaActionTray">
+            <div id="activeCellDisplay">Cell</div>
+            <div><img src="./assets/function_FILL0_wght400_GRAD0_opsz40.svg" alt="Function"></div>
+            <input type="text" placeholder="formulas" id="formulaInput">
+        </section>
+    </header>
+    <main>
+        <section id="tableHead">
+            <!-- hard coding the starting block -->
+            <b>S.no</b>
+        </section>
+        <section id="tableBody"></section>
+    </main>
+    <footer>
+        <div id="addSheetsBtn"><img src="./assets/post_add_FILL0_wght400_GRAD0_opsz24.svg" alt="Add Sheets"></div>
+        <div class="sheetBtn">Sheet 1</div>
+    </footer>
+    
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/activeCell.js"></script>
+    <script src="./scripts/selectOpt.js"></script>
+    <script src="./scripts/manipulateCellProperties"></script>
+</body>
+</html>

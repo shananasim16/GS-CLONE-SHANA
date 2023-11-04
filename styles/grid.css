@@ -1,0 +1,30 @@
+
+/* cells */
+.tableRow>div{
+    flex-shrink: 0;
+    width: var(--cellWidth);
+    height: var(--cellHeight);
+    box-sizing: border-box;
+    padding: 5px 0;
+    background-color: var(--Primary_clr);
+    border: 1px solid var(--Secondary_clr);
+    overflow-y: scroll;
+    /* overflow: hidden; */
+  }
+  
+  .tableRow>div::-webkit-scrollbar{
+    display: none;
+  }
+  
+  .tableRow>b{
+    padding: 5px 0;
+    width: var(--SrCellWidth);
+    height: var(--cellHeight);
+    position: sticky;
+    left: 0px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: var(--Primary_clr);
+    border: 1px solid var(--Secondary_clr);
+  }
+  

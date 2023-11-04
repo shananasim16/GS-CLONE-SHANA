@@ -1,0 +1,80 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+  /* background-color: var(--testBgClr); */
+}
+:root {
+  --Primary_clr: #ffffff;
+  --Secondary_clr: #ecf0f1;
+  --Success_clr: #218c74;
+  --OptionActive_clr: #d1d8e0;
+  --txtPrimary_clr: #000000;
+  --testBgClr: rgba(0, 0, 100, 0.2);
+  --myGap: 20px;
+
+  --cellWidth: 6rem;
+  --cellHeight: 2.5rem;
+  --SrCellWidth: 3rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+main{
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  position: relative;
+}
+
+ /* below lies grid layout css */
+
+#tableHead{
+  display: flex;
+  position: sticky;
+  top: 0px;
+  z-index: 200;
+
+}
+
+/* for all header cells */
+#tableHead > b{
+  flex-shrink: 0;
+  vertical-align: middle;
+  text-align: center;
+  box-sizing: border-box;
+  width: var(--cellWidth);
+  padding: 5px 0;
+  background-color: var(--Primary_clr);
+  border: 1px solid var(--Secondary_clr);
+}
+
+#tableHead > b:nth-child(1){
+  background-color: var(--OptionActive_clr);
+  width: var(--SrCellWidth);
+  text-align: center;
+  position: sticky;
+  left: 0px;
+  top: 0px;
+  vertical-align: middle;
+}
+
+/* prevents the header sticky functionality from 
+breaking while overflow-x is set to scroll  */
+#tableBody, #tableHead{
+  width: fit-content;
+}
+
+.tableRow{
+  display: flex;
+}
+
+.optionActive{
+  background-color: var(--OptionActive_clr);
+}
